@@ -29,6 +29,11 @@ public class Employee implements Serializable {
 	@Email(message = "Email must be a valid email address")
 	private String email;
 
+	@NotEmpty(message = "setor must not be empty")
+	@Email(message = "Setor must be a valid")
+	private String setor;
+	
+	
 	public Employee() {
 	}
 
@@ -62,6 +67,14 @@ public class Employee implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getSetor() {
+		return setor;
+	}
+
+	public void setSetor(String setor) {
+		this.setor = setor;
 	}
 
 	@Override
